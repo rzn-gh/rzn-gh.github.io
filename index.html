@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razan Ghanem | Cyberpunk Portfolio</title>
+  
+  <!-- Cyberpunk & Arcade Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Three.js Library for 3D Graphics -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Retro Scanline Overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Top HUD Bar -->
+  <header class="hud-bar">
+    <div class="hud-stat">
+      <span class="hud-label">PLAYER:</span>
+      <span class="hud-val highlight">RAZAN GHANEM</span>
+    </div>
+    <div class="hud-stat">
+      <span class="hud-label">HP:</span>
+      <div class="bar-container"><div class="bar hp-bar"></div></div>
+    </div>
+    <div class="hud-stat">
+      <span class="hud-label">XP:</span>
+      <div class="bar-container"><div class="bar xp-bar"></div></div>
+    </div>
+    <div class="hud-controls">
+      <button id="sfx-toggle" class="cyber-btn-sm">SFX: ON</button>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="cyber-nav">
+    <a href="#hero" class="nav-link active">[01. START]</a>
+    <a href="#about" class="nav-link">[02. DOSSIER]</a>
+    <a href="#projects" class="nav-link">[03. MISSIONS]</a>
+    <a href="#contact" class="nav-link">[04. COMM-LINK]</a>
+  </nav>
+
+  <main class="container">
+    
+    <!-- Hero / Main Start Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        
+        <!-- 3D Rotating Binary Head Container -->
+        <div class="binary-head-wrapper">
+          <div id="binary-canvas-container"></div>
+          <div class="canvas-tag">SYSTEM_AVATAR // BINARY_NODE_3D</div>
+        </div>
+
+        <!-- Greeting & Boot Terminal -->
+        <div class="hero-content">
+          <div class="tag-badge">LEVEL 01 ARCHITECT</div>
+          <h1 class="glitch-title" data-text="WELCOME PLAYER">WELCOME PLAYER</h1>
+          
+          <div class="terminal-box">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="term-title">sys_init.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p class="term-line">> Initializing neural link...</p>
+              <p class="term-line">> Subject: Razan Ghanem</p>
+              <p class="term-line">> Class: Software Developer & Systems Engineer</p>
+              <p class="term-line prompt-line">$ <span id="typewriter"></span><span class="cursor">_</span></p>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="cyber-btn primary-btn">ENTER MISSIONS</a>
+            <a href="#contact" class="cyber-btn secondary-btn">INITIATE CONTACT</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
